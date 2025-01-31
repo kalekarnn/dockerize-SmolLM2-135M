@@ -1,15 +1,15 @@
-# LLM Text Generation Service
+# SmolLM2-135M Text Generation Service
 
-This project implements a text generation service using a custom LLaMA model architecture. It consists of two services:
+This project implements a text generation service using a custom SmolLM2-135M model architecture. It consists of two services:
 - A model service that handles the text generation
 - A web interface for interacting with the model
 
 ## Project Structure 
-'''
+```
 project/
 ├── model_service/
 │ ├── app.py # Model service Flask application
-│ ├── model.py # LLaMA model implementation
+│ ├── model.py # SmolLM2-135M model implementation
 │ ├── Dockerfile # Model service container configuration
 │ ├── requirements.txt # Model service dependencies
 │ └── checkpoint_5050.pt # Model weights
@@ -19,7 +19,7 @@ project/
 │ └── requirements.txt # Web interface dependencies
 ├── docker-compose.yml # Docker services configuration
 └── README.md # This file
-'''
+```
 
 
 ## Prerequisites
@@ -31,8 +31,9 @@ project/
 ## Setup and Running
 
 1. Make sure the model checkpoint is in the correct location:
-```
+
 Download the model checkpoint from [SmolLM2-135-model checkpoint_5050.pt](https://huggingface.co/spaces/kalekarnn/SmolLM2-135-model/resolve/main/checkpoint_5050.pt)
+```
 cp path/to/checkpoint_5050.pt model_service/checkpoint_5050.pt
 ```
 
